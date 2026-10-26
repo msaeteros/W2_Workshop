@@ -65,6 +65,11 @@ Entity Connection:
    Walk entity will be using Dog_ID to pull out information on what dog is being taken on the walk from the Dog entity. 
    Payment entity will be using Walk_ID to pull out information on which walk is being paid for.
 
-d)
+d) Many-to-many relationships:
+   - None in the current model. Each walk is for one dog (Walks.Dog_ID), and
+     each payment is for one walk (Payment.Walk_ID).
+   - If Lana ever walks several dogs together, Walks and Dogs would become
+     many-to-many, and we would need a resolving table such as Walk_Dogs
+     with Walk_ID and Dog_ID.
 
-e)
+e) Done
